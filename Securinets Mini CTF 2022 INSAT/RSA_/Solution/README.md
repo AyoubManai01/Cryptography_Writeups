@@ -36,4 +36,6 @@ Also we have that:
      </b>
 </p>
 So to retrieve the value of p we can calculate the greatest common divisor of both.  <br>
-Once we get the value of p, we can calculate q and the rest is just basic RSA.
+Once we get the value of p, we can calculate q and the rest is just basic RSA.  <br>
+Using p and q, we calculate Euler's totient phi.  <br>
+Then, we can retrieve the value of d by calculating the inverse of e modulo phi.

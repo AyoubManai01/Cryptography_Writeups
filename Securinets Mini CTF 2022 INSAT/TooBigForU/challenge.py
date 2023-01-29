@@ -1,0 +1,18 @@
+from Crypto.Util.number import bytes_to_long,getPrime
+P=getPrime(128)
+Q=getPrime(128)
+N=P*Q
+phi=(P-1)*(Q-1)
+e=0x10001
+e_1=pow(e,e)
+e_2=pow(e,e_1)
+flag=open("flag.txt",'r').read()
+ciphertext=int(pow(bytes_to_long(flag),e_2,N))
+print(f"N={N}")
+print(f"phi={phi}")
+print(f"ciphertext={ciphertext}")
+
+#e = 65537
+#N=257886411701624440303863099339722259892887355615511340683119027958667491467249
+#phi=257886411701624440303863099339722259891858064693598696204304281461089284156836
+#c=61760926696141556967203413419229585440308265671269056942795033027838415490510
